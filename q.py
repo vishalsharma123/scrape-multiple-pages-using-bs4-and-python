@@ -9,6 +9,9 @@ import cStringIO
 import requests
 import re
 import csv
+import pandas as pd
+import numpy as np
+
 
 myfile = open("myfile.csv",'wb')
 spamwriter = csv.writer(open("myfile.csv",'wb'))
@@ -48,6 +51,16 @@ for index in range(1,12):
             i+=1
      break
 myfile.close()
+df = pd.read_csv('x.csv')
+print (df)
+
+
+df1 = pd.DataFrame({'d1':[value1,value2],
+                    'd2':[value1,value2],
+                    index = [I1,I2]})
+print (pd.merge(df1,df2,on))
+
+                    
 
         
 
